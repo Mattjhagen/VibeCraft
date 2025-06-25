@@ -1,0 +1,58 @@
+Tech Stack
+
+Subabase-->
+
+-- Users table for authentication
+users (id, email, created_at, subscription_tier)
+
+-- Projects table for generated sites/apps
+projects (id, user_id, name, description, generated_code, domain, created_at)
+
+-- Templates table for resume-to-site conversion
+templates (id, name, template_code, category)
+
+
+Authentication:
+* Email/password signup
+* User sessions and protected routes
+* User dashboard for managing projects
+
+File Storage:
+* Resume uploads (PDF, DOCX)
+* Generated site assets
+* User profile images
+2. External API Integrations Needed
+// For AI-powered code generation
+const generateCode = async (prompt: string) => {
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    headers: { 'Authorization': `Bearer ${OPENAI_API_KEY}` },
+    // ... generation logic
+  });
+};
+
+
+Domain Management API:
+* For subdomain creation
+* DNS management
+* SSL certificate provisioning
+Deployment API:
+* For hosting generated sites
+* CDN distribution
+* Build pipeline integration
+3. How to Add Backend Features
+To implement the full VibeCode functionality:
+1. Connect to Supabase by clicking the green Supabase button in the top-right corner
+2. Add Authentication - user signup/login system
+3. Create Database Tables - for storing projects and user data
+4. File Upload System - for resume processing
+5. AI Integration - OpenAI API for code generation
+6. Deployment Pipeline - for hosting generated sites
+4. Next Steps to Improve
+Would you like me to help you implement any of these features? I can:
+* Set up Supabase authentication and database
+* Create a user dashboard for managing projects
+* Add a resume upload and processing system
+* Implement AI-powered code generation
+* Build a project deployment system
+The current landing page is a great starting point, but to make it a functional product like described, we'd need to add these backend services and integrations.
+What specific functionality would you like to implement first?
