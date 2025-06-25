@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, MessageSquare, Rocket } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CallToAction = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
       <div className="max-w-6xl mx-auto text-center">
@@ -47,6 +50,11 @@ const CallToAction = () => {
           </div>
 
           <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-6 text-xl font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+          <Button 
+            size="lg" 
+            onClick={() => navigate('/auth')}
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-6 text-xl font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+          >
             👉 Sign Up for Early Access
             <ArrowRight className="w-6 h-6 ml-3" />
           </Button>
