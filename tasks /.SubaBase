@@ -1,0 +1,17 @@
+-- Required database tables:
+CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT UNIQUE NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE projects (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(id),
+  name TEXT NOT NULL,
+  type TEXT NOT NULL,
+  status TEXT DEFAULT 'building',
+  url TEXT,
+  generated_code TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
