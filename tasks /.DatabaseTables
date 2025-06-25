@@ -1,0 +1,8 @@
+-- Users table for authentication
+users (id, email, created_at, subscription_tier)
+
+-- Projects table for generated sites/apps
+projects (id, user_id, name, description, generated_code, domain, created_at)
+
+-- Templates table for resume-to-site conversion
+templates (id, name, template_code, category)
