@@ -1,5 +1,3 @@
-// OpenAI API Integration (Add to Supabase Edge Functions)
-
 const openaiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
   headers: { 'Authorization': `Bearer ${OPENAI_API_KEY}` },
   body: JSON.stringify({
